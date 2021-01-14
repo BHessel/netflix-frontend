@@ -2,7 +2,7 @@ import './App.css';
 import Header from './Header.js'
 import SignUp from './SignUp.js'
 import Footer from './Footer.js'
-import background from './images/thinBlueSMALL.jpg'
+import background from './images/watchSmall.jpg'
 
 function App() {
   return (
