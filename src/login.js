@@ -1,22 +1,19 @@
 import React from 'react'
+import sidePic from './images/thinBlueSMALL.jpg'
+
 
 export default function login() {
     return (
         <div>
-            <div class="flex items-center min-h-screen p-4 bg-gray-100 lg:justify-center">
+            <div class="flex items-center min-h-screen p-4 lg:justify-center">
       <div
         class="flex flex-col overflow-hidden bg-white rounded-md shadow-lg max md:flex-row md:flex-1 lg:max-w-screen-md"
       >
         <div
-          class="p-4 py-6 text-white bg-blue-500 md:w-80 md:flex-shrink-0 md:flex md:flex-col md:items-center md:justify-evenly"
+          class="p-4 py-6 text-white bg-black md:w-80 md:flex-shrink-0 md:flex md:flex-col md:items-center md:justify-evenly"
         >
-          <div class="my-3 text-4xl font-bold tracking-wider text-center">
-            <a href="#">K-WD</a>
-          </div>
-          <p class="mt-6 font-normal text-center text-gray-300 md:mt-0">
-            With the power of K-WD, you can now focus only on functionaries for your digital products, while leaving the
-            UI design on us!
-          </p>
+          <img src={sidePic} alt='netflix on tv' />
+          
           <p class="flex flex-col items-center justify-center mt-10 text-center">
             <span>Don't have an account?</span>
             <a href="#" class="underline">Get Started!</a>
@@ -61,7 +58,9 @@ export default function login() {
                 type="submit"
                 class="w-full px-4 py-2 text-lg font-semibold text-white transition-colors duration-300 bg-blue-500 rounded-md shadow hover:bg-blue-600 focus:outline-none focus:ring-blue-200 focus:ring-4"
               >
+                <a href='/account'>
                 Log in
+                </a>
               </button>
             </div>
             <div class="flex flex-col space-y-5">

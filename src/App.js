@@ -9,6 +9,7 @@ import {
 import Login from './login'
 import About from './about'
 import Contact from './contact'
+import Account from './account'
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Route exact path ="/login" component={Login}/>
         <Route exact path='/about' component={About}/>
         <Route exact path='/contact' component={Contact}/>
+        <Route exact path='/account' component={Account}/>
         </div>
       </Switch>
     <Footer />
