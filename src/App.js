@@ -1,16 +1,29 @@
 import './App.css';
-import Header from './Header.js'
+import Navbar from './Navbar.js'
 import SignUp from './SignUp.js'
 import Footer from './Footer.js'
 import background from './images/watchSmall.jpg'
+import {
+  Route, Switch
+} from "react-router-dom";
+import Login from './login'
+import About from './about'
+import Contact from './contact'
 
 function App() {
   return (
-    <div className="App" style={{ backgroundImage: `url(${background})`, backgroundRepeat: 'no-repeat', backgroundSize: 'cover' }}>
-      <Header />
-      <SignUp />
-      <Footer />
-    </div>
+    <>
+    <Navbar />
+      <Switch>
+        <div className="App" style={{ backgroundImage: `url(${background})`, backgroundRepeat: 'no-repeat', backgroundSize: 'cover' }}>
+        <Route exact path ="/" component={() => <SignUp />}/>
+        <Route exact path ="/login" component={Login}/>
+        <Route exact path='/about' component={About}/>
+        <Route exact path='/contact' component={Contact}/>
+        </div>
+      </Switch>
+    <Footer />
+    </>
   );
 }
 
