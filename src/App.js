@@ -10,23 +10,39 @@ import Login from './login'
 import About from './about'
 import Contact from './contact'
 import Account from './account'
+import match from './match'
+import React, { Component } from 'react'
 
-function App() {
-  return (
-    <>
-    <Navbar />
-      <Switch>
-        <div className="App" style={{ backgroundImage: `url(${background})`, backgroundRepeat: 'no-repeat', backgroundSize: 'cover' }}>
-        <Route exact path ="/" component={() => <SignUp />}/>
-        <Route exact path ="/login" component={Login}/>
-        <Route exact path='/about' component={About}/>
-        <Route exact path='/contact' component={Contact}/>
-        <Route exact path='/account' component={Account}/>
-        </div>
-      </Switch>
-    <Footer />
-    </>
-  );
+
+const userURL = 'http://localhost:3000/users'
+export default class App extends Component {
+  
+  state = {
+    user: []
+  }
+  
+  async componentDidMount(){
+    const respsone = await fetch(userURL)
+    const user = await respsone.json()
+    this.setState({ user })
+  }
+
+  render() {
+    return (
+      <>
+      <Navbar />
+        <Switch>
+          <div className="App" style={{ backgroundImage: `url(${background})`, backgroundRepeat: 'no-repeat', backgroundSize: 'cover' }}>
+          <Route exact path ="/" component={() => <SignUp />}/>
+          <Route exact path ="/login" component={Login}/>
+          <Route exact path='/about' component={About}/>
+          <Route exact path='/contact' component={Contact}/>
+          <Route exact path='/account' component={Account}/>
+          <Route exact path='/match' component={match}/>
+          </div>
+        </Switch>
+      <Footer />
+      </>
+    );
+  }
 }
-
-export default App;

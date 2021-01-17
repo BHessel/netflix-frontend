@@ -11,7 +11,7 @@ export default function SignUp() {
             <p className="text-white font-medium text-center text-lg font-bold">Get Started</p>
               <div className="">
                 <label className="block text-sm text-white" for="email">Username</label>
-                <input className="w-full px-5 py-1 text-gray-700 bg-gray-300 rounded focus:outline-none focus:bg-white" type="email" id="email"  placeholder="Email" aria-label="email" required/>
+                <input className="w-full px-5 py-1 text-gray-700 bg-gray-300 rounded focus:outline-none focus:bg-white" type="username" id="username"  placeholder="Username" aria-label="username" required/>
               </div>
               <div className="mt-2">
                 <label className="block  text-sm text-white">Password</label>
@@ -19,11 +19,10 @@ export default function SignUp() {
                   type="password" id="password" placeholder="Password" arial-label="password" required/>
               </div>
 
-              <div className="mt-4 items-center flex justify-between">
-                <button className="px-4 py-1 text-white font-light tracking-wider bg-gray-900 hover:bg-gray-800 rounded"
-                  type="submit">Enter</button>
-                <a className="inline-block right-0 align-baseline font-bold text-sm text-500 text-white hover:text-red-400"
-                  href="#">Forgot Password?</a>
+              <div className="mt-4 items-center flex justify-center">
+                
+                <a href="/account"><button className="px-4 py-1 text-white font-light tracking-wider bg-gray-900 hover:bg-gray-800 rounded"
+                  type="submit">Create Account</button></a>
               </div>
 
         </form>
