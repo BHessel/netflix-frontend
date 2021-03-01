@@ -31,14 +31,7 @@ export default class account extends Component {
                     </div>
                 </div>
 
-                <div class="max-w-xs w-full text-center">
-                    <img class="h-48 w-full object-cover object-center mx-auto rounded-lg" src="https://images.unsplash.com/photo-1516756587022-7891ad56a8cd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=334&q=80" alt="avatar"/>
-
-                    <div class="mt-2">
-                        <h3 class="text-lg font-medium text-gray-400 dark:text-gray-200">Jane Doe</h3>
-                        <span class="mt-1 font-medium text-gray-500 dark:text-gray-300">Co-founder</span>
-                    </div>
-                </div>
+                
             </div>
         </div>
     </section>

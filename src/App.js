@@ -15,17 +15,26 @@ import React, { Component } from 'react'
 
 
 const userURL = 'http://localhost:3000/users'
+const trailerURL = 'http://localhost:3000/trailers'
 export default class App extends Component {
   
   state = {
-    user: []
+    users: [],
+    trailers: []
   }
   
-  async componentDidMount(){
-    const respsone = await fetch(userURL)
-    const user = await respsone.json()
-    this.setState({ user })
+  componentDidMount(){
+    Promise.all([
+      fetch(userURL).then(res => res.json()),
+      fetch(trailerURL).then(res => res.json())
+    ]).then(([userURLData, trailerURLData]) => {
+      this.setState({
+        users: userURLData,
+        trailers: trailerURLData
+      })
+    })
   }
+  //make this a trailer fetch?
 
   render() {
     return (
