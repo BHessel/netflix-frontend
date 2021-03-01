@@ -1,7 +1,6 @@
 import './App.css';
 import Navbar from './Navbar.js'
 import SignUp from './SignUp.js'
-import Footer from './Footer.js'
 import background from './images/watchSmall.jpg'
 import {
   Route, Switch
@@ -10,6 +9,7 @@ import Login from './login'
 import AccountHome from './account'
 import showTrailer from './showTrailer'
 import showMatches from './showMatches'
+import mainContainer from './mainContainer'
 import React, { Component } from 'react'
 
 
@@ -40,15 +40,12 @@ export default class App extends Component {
       <>
       <Navbar />
         <Switch>
-          <div className="App" style={{ backgroundImage: `url(${background})`, backgroundRepeat: 'no-repeat', backgroundSize: 'cover' }}>
-          <Route exact path ="/" component={SignUp}/>
+          <Route exact path ="/" component={mainContainer}/>
           <Route exact path ="/login" component={Login}/>
           <Route exact path='/account' component={AccountHome}/>
           <Route exact path='/trailers' component={showTrailer}/>
           <Route exact path='/matches' component={showMatches}/>
-          </div>
         </Switch>
-      <Footer />
       </>
     );
   }
