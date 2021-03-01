@@ -7,10 +7,9 @@ import {
   Route, Switch
 } from "react-router-dom";
 import Login from './login'
-import About from './about'
-import Contact from './contact'
-import Account from './account'
-import match from './showTrailer'
+import AccountHome from './account'
+import showTrailer from './showTrailer'
+import showMatches from './showMatches'
 import React, { Component } from 'react'
 
 
@@ -42,12 +41,11 @@ export default class App extends Component {
       <Navbar />
         <Switch>
           <div className="App" style={{ backgroundImage: `url(${background})`, backgroundRepeat: 'no-repeat', backgroundSize: 'cover' }}>
-          <Route exact path ="/" component={() => <SignUp />}/>
+          <Route exact path ="/" component={SignUp}/>
           <Route exact path ="/login" component={Login}/>
-          <Route exact path='/about' component={About}/>
-          <Route exact path='/contact' component={Contact}/>
-          <Route exact path='/account' component={Account}/>
-          <Route exact path='/match' component={match}/>
+          <Route exact path='/account' component={AccountHome}/>
+          <Route exact path='/trailers' component={showTrailer}/>
+          <Route exact path='/matches' component={showMatches}/>
           </div>
         </Switch>
       <Footer />
