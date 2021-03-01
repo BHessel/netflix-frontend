@@ -2,7 +2,7 @@ import React from 'react'
 import ReactPlayer from 'react-player'
 
 
-export default function match() {
+export default function showTrailer() {
     return (
         <div className='container'>
             <div className='dislikeBtn'>

@@ -10,7 +10,7 @@ import Login from './login'
 import About from './about'
 import Contact from './contact'
 import Account from './account'
-import match from './match'
+import match from './showTrailer'
 import React, { Component } from 'react'
 
 
@@ -34,7 +34,7 @@ export default class App extends Component {
       })
     })
   }
-  //make this a trailer fetch?
+  
 
   render() {
     return (

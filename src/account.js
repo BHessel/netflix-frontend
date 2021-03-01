@@ -1,17 +1,6 @@
 import React, { Component } from 'react'
 
-const trailerURL = "http://localhost:3000/trailers"
 export default class account extends Component {
-
-    state = {
-        trailers: []
-    }
-
-    async componentDidMount() {
-        const response = await fetch(trailerURL)
-        const trailers = await response.json()
-        this.setState({ trailers })
-    }
 
     render() {
     return (
