@@ -13,7 +13,7 @@ export default class FriendSearch extends Component {
                     <div className="searchedUserName">
                         {this.props.searchedUsers}
                     </div>
-                    <button onClick={}>Add to Friends List</button>
+                    <button>Add to Friends List</button>
                     // THIS CREATES A PARTNERSHIP!!! GET/POST to the backend
                     // go to partnership home (showTrailer)
                     

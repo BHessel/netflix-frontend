@@ -1,21 +1,21 @@
 import React, { Component } from 'react'
 import {
-    Link
+    Link, Route
   } from "react-router-dom";
   import FriendSearch from './FriendSearch'
 
 export default class Account extends Component {
 
 state = {
-    searchedUsers: ""
+    searchedUser: ""
 }
 
 userSearch = (e) => {
     let searchedUser = e.target.value.toLowerCase()
     //1-GOOD - make sure I have user props here
     //2 if the state of user.username.toLowerCase() includes e.target.value.toLowerCase()
-    if(this.props.users.username.toLowerCase().includes(searchedUser)){
-        this.setState({ searchedUsers: [...this.state.searchedUsers, searchedUser]})}
+    if(this.props.users[0].username.toLowerCase() === searchedUser){
+        this.setState({ searchedUser })}
     //3setState of searchedUsers to match the search, copying OG state (spread op)
     
     //once button is clicked, pass searchedUsers down as this.state.searchedUsers
@@ -30,7 +30,7 @@ userSearch = (e) => {
                 <div className="userSearch">
                     <label for="friend-search">Find Your Friends:</label>
                     <input type="search" id="friend-search" onChange={(e) => this.userSearch(e)}></input>
-                    <button><Link to="/FriendSearch" render={() => <FriendSearch searchedUsers={this.state.searchedUsers} />}>Search</Link></button>
+                    <button><Link to="/FriendSearch" render={() => <FriendSearch searchedUsers={this.state.searchedUser} />}>Search</Link></button>
                 </div>
                 <div className="friendList">
                     <ul>
