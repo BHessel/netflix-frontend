@@ -1,9 +1,10 @@
-import React from 'react'
+import React, { Component } from 'react'
 import ReactPlayer from 'react-player'
 
 
-export default function showTrailer() {
-    return (
+export default class showTrailer extends Component {
+    render() {
+        return (
         <div className='container'>
             <div className='dislikeBtn'>
                 <button>Dislike</button>
@@ -30,4 +31,4 @@ export default function showTrailer() {
             
         </div>
     )
-}
+}}

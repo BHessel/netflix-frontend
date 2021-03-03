@@ -5,8 +5,8 @@ import background from './images/watchSmall.jpg'
 import {
   Route, Switch
 } from "react-router-dom";
-import Login from './login'
-import AccountHome from './account'
+import Login from './Login'
+import AccountHome from './Account'
 import showTrailer from './showTrailer'
 import showMatches from './showMatches'
 import mainContainer from './mainContainer'
