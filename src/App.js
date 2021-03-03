@@ -1,7 +1,5 @@
 import './App.css';
 import Navbar from './Navbar.js'
-import SignUp from './SignUp.js'
-import background from './images/watchSmall.jpg'
 import {
   Route, Switch
 } from "react-router-dom";
@@ -9,7 +7,7 @@ import Login from './Login'
 import AccountHome from './Account'
 import showTrailer from './showTrailer'
 import showMatches from './showMatches'
-import mainContainer from './mainContainer'
+import MainContainer from './MainContainer'
 import React, { Component } from 'react'
 
 
@@ -29,19 +27,23 @@ export default class App extends Component {
     ]).then(([userURLData, trailerURLData]) => {
       this.setState({
         users: userURLData,
-        trailers: trailerURLData
+        trailers: trailerURLData,
+        search: ""
       })
     })
   }
   
+  userSearch = (e) => {
+    this.setState({search: e.target.value})
+  }
 
   render() {
     return (
       <>
       <Navbar />
         <Switch>
-          <Route exact path ="/" component={mainContainer}/>
-          <Route exact path ="/login" component={Login}/>
+          <Route exact path ="/" render={() => <MainContainer userSearch={this.userSearch} users={this.state.users} />}/>
+          <Route exact path ="/login" component={Login} />
           <Route exact path='/account' component={AccountHome}/>
           <Route exact path='/trailers' component={showTrailer}/>
           <Route exact path='/matches' component={showMatches}/>

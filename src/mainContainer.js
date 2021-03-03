@@ -1,12 +1,16 @@
 import React, { Component } from 'react'
 import background from './images/watchSmall.jpg'
 import SignUp from './SignUp.js'
-
-export default class mainContainer extends Component {
+import Account from './Account'
+export default class MainContainer extends Component {
     render() {
         return (
             <div className="backgroundImage" style={{ backgroundImage: `url(${background})`, backgroundRepeat: 'no-repeat', backgroundSize: 'cover' }}>
-                <SignUp />
+                {/* <SignUp /> */}
+                <Account 
+                    userSearch={this.props.userSearch}
+                    users={this.props.users}
+                />
             </div>
         )
     }

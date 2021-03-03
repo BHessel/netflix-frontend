@@ -3,7 +3,7 @@ import React from 'react'
 export default function SignUp() {
     return (
     <>
-<div class="h-screen font-sans bg-cover">
+<div className="h-screen font-sans bg-cover">
 <div className="container flex items-center justify-end flex-1 h-full mx-auto">
     
       

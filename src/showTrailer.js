@@ -14,8 +14,8 @@ export default class showTrailer extends Component {
                 <ReactPlayer url='https://www.youtube.com/watch?v=ysz5S6PUM-U' />
             </div>
 
-            <div className='seenBtn'>
-                <button>Already Seen</button>
+            <div className='skipBtn'>
+                <button>Skip (Already Seen)</button>
             </div>
             
             <div className='Description'>

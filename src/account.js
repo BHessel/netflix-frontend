@@ -1,4 +1,8 @@
 import React, { Component } from 'react'
+import {
+    Link
+  } from "react-router-dom";
+  import FriendSearch from './FriendSearch'
 
 export default class Account extends Component {
     render() {
@@ -6,8 +10,8 @@ export default class Account extends Component {
             <>
                 <div className="userSearch">
                     <label for="friend-search">Find Your Friends:</label>
-                    <input type="search" id="friend-search"></input>
-                    <button>Search</button>
+                    <input type="search" id="friend-search" onChange={(e) => this.props.userSearch(e)}></input>
+                    <button><Link to="/FriendSearch" render={() => <FriendSearch users={this.props.users} />}>Search</Link></button>
                 </div>
                 <div className="friendList">
                     <ul>
