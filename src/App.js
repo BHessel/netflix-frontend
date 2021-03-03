@@ -24,25 +24,18 @@ export default class App extends Component {
     Promise.all([
       fetch(userURL).then(res => res.json()),
       fetch(trailerURL).then(res => res.json())
-    ]).then(([userURLData, trailerURLData]) => {
-      this.setState({
-        users: userURLData,
-        trailers: trailerURLData,
-        search: ""
-      })
+    ]).then(([users, trailers]) => {
+      this.setState({ users, trailers })
     })
   }
   
-  userSearch = (e) => {
-    this.setState({search: e.target.value})
-  }
 
   render() {
     return (
       <>
       <Navbar />
         <Switch>
-          <Route exact path ="/" render={() => <MainContainer userSearch={this.userSearch} users={this.state.users} />}/>
+          <Route exact path ="/" render={() => <MainContainer users={this.state.users} />}/>
           <Route exact path ="/login" component={Login} />
           <Route exact path='/account' component={AccountHome}/>
           <Route exact path='/trailers' component={showTrailer}/>

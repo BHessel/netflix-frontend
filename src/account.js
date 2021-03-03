@@ -11,11 +11,15 @@ state = {
 }
 
 userSearch = (e) => {
-    //1make sure I have user props here
+    let searchedUser = e.target.value.toLowerCase()
+    //1-GOOD - make sure I have user props here
     //2 if the state of user.username.toLowerCase() includes e.target.value.toLowerCase()
+    if(this.props.users.username.toLowerCase().includes(searchedUser)){
+        this.setState({ searchedUsers: [...this.state.searchedUsers, searchedUser]})}
     //3setState of searchedUsers to match the search, copying OG state (spread op)
-    this.setState({searchedUsers: e.target.value.toLowerCase()})
+    
     //once button is clicked, pass searchedUsers down as this.state.searchedUsers
+    //this works because the username acts as a uniqueID here once I put in validations, don't need to send the actual ID down (repetetive)
     //FriendSearch is a display page, showing a list of each user, with the option to CREATE PARTNERSHIP, OR, return to account home
     //I can focus on displaying friendship in accthome later, let's get that partnership initiated first to prove relationship can be made in DB
 }
