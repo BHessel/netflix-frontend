@@ -3,11 +3,11 @@ import Navbar from './Navbar.js'
 import {
   Route, Switch
 } from "react-router-dom";
-import Login from './Login'
+import Login from './login'
 import AccountHome from './Account'
 import showTrailer from './showTrailer'
 import showMatches from './showMatches'
-import MainContainer from './MainContainer'
+import MainContainer from './mainContainer'
 import React, { Component } from 'react'
 import FriendSearch from './FriendSearch';
 
