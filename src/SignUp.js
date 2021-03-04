@@ -7,7 +7,7 @@ export default class SignUp extends Component {
     password: "",
     partner_id: "",
     created: false,
-    errorMessage: ""
+    errors: ""
   }
 
   handleUserChange = (e) => {
@@ -40,8 +40,8 @@ export default class SignUp extends Component {
     }
     
     fetch("http://localhost:3000/users", requestPackage)
-      .then((res) => res.json())
-      .then((response) => console.log(response)) 
+      // .then((res) => res.json())
+      // .then((response) => console.log(response)) 
   }
 
   render() {
