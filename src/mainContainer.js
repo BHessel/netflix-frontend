@@ -6,10 +6,13 @@ export default class MainContainer extends Component {
     render() {
         return (
             <div className="backgroundImage" style={{ backgroundImage: `url(${background})`, backgroundRepeat: 'no-repeat', backgroundSize: 'cover' }}>
-                {/* <SignUp /> */}
+                <SignUp 
+                    users={this.props.users}
+                />
                 <Account
                     users={this.props.users}
                 />
+                
             </div>
         )
     }

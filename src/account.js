@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import {
     Link
   } from "react-router-dom";
-  import FriendSearch from './FriendSearch'
+
 
 export default class Account extends Component {
 
@@ -20,9 +20,7 @@ export default class Account extends Component {
         //this works because the username acts as a uniqueID here once I put in validations, don't need to send the actual ID down (repetetive)
         //FriendSearch is a display page, showing a list of each user, with the option to CREATE PARTNERSHIP, OR, return to account home
         
-    handleSearch = () => {
-        
-    }
+    
     
     render() {
         return (
