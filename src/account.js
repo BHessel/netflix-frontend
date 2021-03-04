@@ -41,9 +41,9 @@ export default class Account extends Component {
                 </div>
                 
                 <div className="friendList">
+                    <h4>Current Friendships:</h4>
                     <ul>
-                        <li>Friend 1</li>
-                        <li>Friend 2</li>
+                        
                     </ul>
                 </div>
             </>
